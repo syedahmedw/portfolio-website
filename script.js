@@ -29,16 +29,6 @@ document.querySelectorAll("nav a").forEach((anchor) => {
   });
 });
 
-// Contact form submission
-// document
-//   .getElementById("contact-form")
-//   .addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     document.getElementById("form-status").textContent =
-//       "✅ Thank you! Your message has been sent.";
-//     this.reset();
-//   });
-
   const form = document.getElementById("contact-form");
   form.addEventListener("submit", async function (e) {
     e.preventDefault(); // Stop normal redirect
@@ -58,3 +48,4 @@ document.querySelectorAll("nav a").forEach((anchor) => {
       status.textContent = "❌ Oops! Something went wrong. Please try again.";
     }
   });
+
