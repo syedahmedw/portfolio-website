@@ -1,0 +1,247 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 0.3s;
+    transition: all 1s ease;
+
+}
+a{
+    text-decoration: none;
+}
+
+button{cursor: pointer;}
+button:hover{
+    transform: scale(1.01);
+}
+
+
+/* Darkmode */
+body.dark-mode{
+    background-color: black;
+    color: white;
+}
+body.dark-mode a{
+    color: aqua;
+}
+body.dark-mode header,body.dark-mode footer{
+    background-color: #151515;
+    border-color: rgb(20, 20, 20);
+}
+body.dark-mode h2{
+    color: aqua;
+}
+/* lightmode  Learn JS First  */
+ body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+body.light-mode a { color: #0077cc; }
+body.light-mode header, body.light-mode footer, body.light-mode .project {
+    background-color: #fff;
+    border-color: #ccc;
+}
+body.light-mode h2 { color: #0077cc; }
+body.light-mode .skill{
+    color: #ffffff;
+}
+
+
+header{
+    padding: 37px 0;
+    text-align: center;
+    border-bottom: 2px solid;
+    display: flex;
+    justify-content: center;
+}
+.subtitle{
+    font-size: 1.2rem;
+}
+nav{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+nav a{
+    font-weight: bold;
+    margin: 0 15px;
+    display: inline-block; /* needed for transform to work correctly */
+  transition: transform 0.1s;
+}
+nav a:hover{
+    transform: scale(1.05);
+}
+#theme-toggle{
+    background-color: aqua;
+    color: #151515;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+}
+body.light-mode #theme-toggle{
+    background-color: #0077cc;
+    color: white;
+}
+/* Sections */
+.container { 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 40px 20px;
+}
+.cord{
+    margin-left: 0px;
+    max-width: 1500px;
+    margin-left: 220px;
+}
+.center{
+    text-align: center;
+    justify-content: center;
+}
+h2 { 
+    margin-bottom: 20px; 
+    border-bottom: 2px solid; 
+    display: inline-block; 
+    padding-bottom: 5px; }
+
+#Education p{
+    font-size: 22px;
+}
+
+/* Techskills */
+.skill{
+    background: rgb(19, 49, 49);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+body.light-mode .skill{
+    background: #0077cc;
+    color: #151515;
+}
+.skill:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 2px 5px rgb(25, 68, 68);
+}
+.skills-grid:hover .skill:not(:hover) {
+    /* transform: scale(0.95); */
+    opacity: 0.95;
+}
+body.light-mode .skill:hover{
+    box-shadow: 0px 1px 15px black;
+}
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    justify-content: center; /* Centers items horizontally */
+    max-width: 600px; /* Prevents spanning too wide */
+    margin: 0 auto; /*Centers the grid container itself */
+}
+
+
+/* projects */
+.project{
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 15px rgb(19, 49, 49);
+    transition: transform 0.3s;
+}
+.project:hover{
+    box-shadow: -1px 15px 15px rgb(9, 55, 55);
+    transform: scale(1.02);
+}
+
+body.light-mode .project{
+    background-color: #0077cc;
+    color: #222222;
+    box-shadow: -1px 5px 10px rgb(33, 42, 42);
+}
+body.light-mode .project:hover{
+    box-shadow: -3px 6px 10px rgb(33, 42, 42);
+}
+
+/* contact info */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+button[type="submit"]{
+    background-color: aqua;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+button[type="submit"]:hover{
+    transform: scale(1.01);
+}
+body.light-mode button[type="submit"]{
+    background-color: #0077cc;
+    color: white;
+}
+footer{
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 1px solid;
+}
+/* JAVASCRIPT */
+#form-status {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* contacts&links */
+.contact-info{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* photos */
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 2rem; */
+    /* flex-wrap: wrap; */
+    /* text-align: center; */
+}
+
+.hero-text {
+    flex: 0.6;
+    text-align: center;
+    /* flex: 0 0 auto; */
+}
+
+.hero-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    object-fit: cover;
+}
+body.light-mode .hero-image img{
+    border: 0px;
+    box-shadow: 1px 1px 15px 3px #084672;
+}
+.hero-image {
+    margin-left: 40px;
+}
