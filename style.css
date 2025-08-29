@@ -70,7 +70,7 @@ nav{
 nav a{
     font-weight: bold;
     margin: 0 15px;
-    display: inline-block; /* needed for transform to work correctly */
+    display: inline-block; 
   transition: transform 0.1s;
 }
 nav a:hover{
@@ -141,9 +141,9 @@ body.light-mode .skill:hover{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
-    justify-content: center; /* Centers items horizontally */
-    max-width: 600px; /* Prevents spanning too wide */
-    margin: 0 auto; /*Centers the grid container itself */
+    justify-content: center; 
+    max-width: 600px; 
+    margin: 0 auto; 
 }
 
 
@@ -220,15 +220,11 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* gap: 2rem; */
-    /* flex-wrap: wrap; */
-    /* text-align: center; */
 }
 
 .hero-text {
     flex: 0.6;
     text-align: center;
-    /* flex: 0 0 auto; */
 }
 
 .hero-image img {
@@ -242,6 +238,67 @@ body.light-mode .hero-image img{
     border: 0px;
     box-shadow: 1px 1px 15px 3px #084672;
 }
+
+/* === Mobile Responsive Fix === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cord {
+        margin-left: 0;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .hero-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    #Education p {
+        font-size: 18px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 .hero-image {
     margin-left: 40px;
 }
+
